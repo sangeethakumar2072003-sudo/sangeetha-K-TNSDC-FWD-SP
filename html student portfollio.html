@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* Global Styles */
+    :root {
+      --primary-color: #007BFF;
+      --secondary-color: #2c3e50;
+      --background-color: #f4f4f9;
+      --card-bg: #fff;
+      --text-color: #555;
+      --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: var(--background-color); color: var(--text-color); }
+    h1,h2 { color: var(--secondary-color); }
+    section { padding: 4rem 0; }
+    .container { width: 90%; max-width: 1100px; margin: auto; }
+
+    /* Navbar */
+    header { position: fixed; top: 0; width: 100%; background: #fff; box-shadow: var(--shadow); z-index: 1000; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    nav .logo { font-size: 1.5rem; font-weight: 600; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 20px; }
+    nav ul a { text-decoration: none; color: var(--secondary-color); transition: color .3s; }
+    nav ul a:hover { color: var(--primary-color); }
+
+    /* Hero */
+    #hero {
+      height: 100vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      text-align: center; color: #fff;
+    }
+    #hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    #hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .btn { background: var(--primary-color); color: #fff; padding: 0.7rem 1.5rem; border-radius: 5px; text-decoration: none; transition: background .3s; }
+    .btn:hover { background: #0056b3; }
+
+    /* About */
+    #about .about-content { display: flex; gap: 2rem; align-items: center; }
+    #about img { width: 250px; border-radius: 50%; border: 5px solid var(--primary-color); }
+    #about p { flex: 1; }
+
+    /* Skills */
+    #skills .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+      gap: 1.5rem; text-align: center;
+    }
+    .skill-item {
+      background: var(--card-bg); padding: 1.5rem; border-radius: 10px;
+      box-shadow: var(--shadow); transition: transform .3s;
+    }
+    .skill-item:hover { transform: translateY(-8px); }
+    .skill-item i { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 0.5rem; }
+
+    /* Projects */
+    #projects .project-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: var(--card-bg); border-radius: 10px; overflow: hidden;
+      box-shadow: var(--shadow); transition: transform .3s;
+    }
+    .project-card:hover { transform: scale(1.05); }
+    .project-card img { width: 100%; height: 180px; object-fit: cover; }
+    .project-card .content { padding: 1rem; }
+    .project-card h3 { margin-bottom: 0.5rem; }
+
+    /* Contact */
+    #contact { text-align: center; }
+    .contact-links a {
+      margin: 0 1rem; font-size: 1.2rem; color: var(--secondary-color); text-decoration: none;
+      transition: color .3s;
+    }
+    .contact-links a:hover { color: var(--primary-color); }
+
+    /* Footer */
+    footer { background: var(--secondary-color); color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+
+    /* Responsive */
+    @media(max-width:768px) {
+      #about .about-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">sangeethak</div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h1>Hello, I'm sangeethakumar</h1>
+    <p>A passionate learner and aspiring web developer.</p>
+    <a href="#projects" class="btn">See My Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="d:\sangeetha.jpeg" alt="d:\sangeetha.jpeg">
+        <p>
+          I am sangeethakumar  at [annamalai university]. I love building websites and exploring new technologies.
+          I am currently learning HTML, CSS, and JavaScript. My goal is to become a full-stack developer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><i class="fab fa-html5"></i><p>HTML</p></div>
+        <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+        <div class="skill-item"><i class="fab fa-js-square"></i><p id="js-skill">JavaScript (Learning)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="c:\Users\ELCOT\Downloads\WhatsApp Image 2025-08-21 at 3.20.37 PM.jpeg" alt="Project 1">
+          <div class="content">
+            <h3>Project One</h3>
+            <p>A simple portfolio website built with HTML & CSS.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="c:\Users\ELCOT\Downloads\WhatsApp Image 2025-08-21 at 3.20.37 PM.jpeg" alt="Project 2">
+          <div class="content">
+            <h3>Project Two</h3>
+            <p>A responsive landing page with animations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Let's connect and create amazing things together!</p>
+      <div class="contact-links">
+        <a href="mailto:sangeethakumar2072003@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="d:\sangeetha.jpeg"><i class="d:\sangeetha.jpeg"></i> LinkedIn</a>
+        <a href=""><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Student Name. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Animate JS skill text
+    const jsSkill = document.getElementById('js-skill');
+    const texts = ['(Learning)', '(In Progress)', '(Developing)'];
+    let idx = 0;
+    setInterval(() => {
+      idx = (idx + 1) % texts.length;
+      jsSkill.textContent = "JavaScript " + texts[idx];
+    }, 2000);
+
+    // Navbar color change on scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 50){
+        header.style.backgroundColor = '#fff';
+        header.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+      } else {
+        header.style.backgroundColor = 'transparent';
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
